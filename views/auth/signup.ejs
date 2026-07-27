@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/authStyle.css">
+    </head>
+    <body>
+        <%-include("./header.ejs")%>
+        <div class="parent-container">
+            <div class="container">
+                <form method="POST" action="/auth/signup/submit" class="signup_form">
+                    <div class="form_header">
+                        <h1>Sign up</h1>
+                        <p>Already have an account? <a href="/auth/signin">Sign in</a></p>
+                    </div>
+                    <span style="color: red;"><%= msg %></span>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password">
+                    <div class="checkbox">
+                        <input type="checkbox" >
+                        <p>I do not want to receive emails with advertising, news, suggestions or marketing promotions</p>
+                    </div>
+                    <input type="submit" value="Sign up">
+                    <p class="footnote">
+                        By signing up to create an account, 
+                        you are accepting out terms of services and privacy policy
+                    </p>
+                </form>         
+            </div>
+        </div>
+    </body>
+</html>

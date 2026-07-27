@@ -1,0 +1,19 @@
+{
+	"name": "theapp",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "node --watch ./bin/www"
+	},
+	"dependencies": {
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"ejs": "~2.6.1",
+		"enkanetwork": "^3.1.1",
+		"enkanetwork.js": "^2.10.10",
+		"express": "~4.16.1",
+		"http-errors": "~1.6.3",
+		"mongodb": "^7.5.0",
+		"morgan": "~1.9.1"
+	}
+}
