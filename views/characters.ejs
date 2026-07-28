@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Agents</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/stylesheets/stylechara.css">
 </head>
 <body>
+    <a href="index">
+    <%-include("layout/header.ejs")%>
+    </a>
+    <main>
     <h1>Agents</h1>
 
     <div class="grid">
@@ -24,7 +28,7 @@
             </div>
         <% }); %>
     </div>
-
+</main>
     <script>
         document.querySelectorAll('.owned-toggle').forEach((btn) => {
             btn.addEventListener('click', async () => {
@@ -42,5 +46,6 @@
             });
         });
     </script>
+
 </body>
 </html>

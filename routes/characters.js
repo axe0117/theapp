@@ -42,4 +42,7 @@ router.get('/characters/owned', async (req, res) => {
 	res.json(owned.filter(Boolean));
 });
 
+router.get('/index', function (req, res, next) {
+	res.render('index', { name: dbuser.name });
+});
 module.exports = router;

@@ -1,0 +1,112 @@
+@font-face {
+	/* zzz dialogue font */
+	font-family: 'zzz';
+	src: url('fonts/en-us.ttf');
+}
+
+/* -------------------------So this is the characters page------------------------------------------- */
+body {
+	font-family: 'zzz', sans-serif;
+	background: #111;
+	color: #eee;
+	margin: 0;
+}
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	align-items: center; /* cross axis */
+	z-index: 100;
+}
+
+main {
+	padding: 2rem;
+}
+.logo img {
+	width: 100px;
+	height: 100px;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 1rem;
+	color: white;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	background: #1c1c1c;
+	border-radius: 10px;
+	padding: 0.75rem;
+	transition:
+		transform 0.15s ease,
+		background 0.15s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	background: #262626;
+}
+
+.card img {
+	width: 96px;
+	height: 96px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.card p {
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.detail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.detail img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 12px;
+}
+
+.comp-card {
+	background: #1c1c1c;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+.comp-card.dimmed {
+	opacity: 0.6;
+}
+
+.comp-card .notes {
+	color: #aaa;
+	font-size: 0.85rem;
+	margin-top: 0.4rem;
+}
+
+a {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'zzz';
+}

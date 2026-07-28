@@ -25,8 +25,6 @@
 	<body>
 		<%-include("layout/header.ejs")%>
 		<main>
-			<p>Welcome, <%= name %></p>
-
 			<section class="home">
 				<div>
 					<img src="/images/miya.gif" />
@@ -34,9 +32,11 @@
 				<div class="dialogue-box">
 					<div class="speaker">Hoshimi Miyabi</div>
 
-					<p class="dialogue-text">Gaming...is also a part of training</p>
+					<p class="dialogue-text">Welcome back...<%= name %></p>
 
-					<div class="continue">»</div>
+					<div class="continue">
+						<a href="/characters">»</a>
+					</div>
 				</div>
 			</section>
 		</main>
