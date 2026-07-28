@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Your Team Comps</title>
+		<link
+			rel="stylesheet"
+			href="/css/style.css"
+		/>
+	</head>
+	<body>
+		<a href="/characters">&larr; Back to agents</a>
+		<h1>Your Team Comps</h1>
+
+		<div id="buildable-section">
+			<h2>Ready to build</h2>
+			<div id="buildable-list"></div>
+		</div>
+
+		<div id="almost-section">
+			<h2>One character away</h2>
+			<div id="almost-list"></div>
+		</div>
+
+		<script>
+			async function loadTeamComps() {
+				const res = await fetch('/team-comps/available');
+				if (!res.ok) {
+					document.body.innerHTML +=
+						'<p>Please log in to see your team comps.</p>';
+					return;
+				}
+				const { buildable, almostThere } = await res.json();
+
+				const buildableList = document.getElementById('buildable-list');
+				buildable.forEach((comp) => {
+					const div = document.createElement('div');
+					div.className = 'comp-card';
+					div.innerHTML = `
+                    <strong>${comp.label}</strong> (${comp.tier})
+                    <p>${comp.members.map((m) => m.name).join(' + ')}</p>
+                    <p class="notes">${comp.notes || ''}</p>
+                `;
+					buildableList.appendChild(div);
+				});
+
+				const almostList = document.getElementById('almost-list');
+				almostThere.forEach(({ comp, missing }) => {
+					const div = document.createElement('div');
+					div.className = 'comp-card dimmed';
+					div.innerHTML = `
+                    <strong>${comp.label}</strong> (${comp.tier})
+                    <p>${comp.members.map((m) => m.name).join(' + ')}</p>
+                    <p class="notes">Missing: <strong>${missing.name}</strong></p>
+                `;
+					almostList.appendChild(div);
+				});
+			}
+
+			loadTeamComps();
+		</script>
+	</body>
+</html>

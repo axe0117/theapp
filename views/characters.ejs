@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agents</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Agents</h1>
+
+    <div class="grid">
+        <% agents.forEach(agent => { %>
+            <div class="card" data-name="<%= agent.name %>">
+                <a href="/characters/<%= encodeURIComponent(agent.name) %>">
+                    <img src="<%= agent.icon %>" alt="<%= agent.name %>">
+                    <p><%= agent.name %></p>
+                </a>
+                <button
+                    class="owned-toggle <%= ownedNames.includes(agent.name) ? 'is-owned' : '' %>"
+                    data-name="<%= agent.name %>"
+                >
+                    <%= ownedNames.includes(agent.name) ? 'Owned ✓' : 'Mark as Owned' %>
+                </button>
+            </div>
+        <% }); %>
+    </div>
+
+    <script>
+        document.querySelectorAll('.owned-toggle').forEach((btn) => {
+            btn.addEventListener('click', async () => {
+                const name = btn.dataset.name;
+                const res = await fetch(`/characters/${encodeURIComponent(name)}/toggle`, {
+                    method: 'POST',
+                });
+                if (!res.ok) {
+                    alert('Please log in to track owned characters.');
+                    return;
+                }
+                const data = await res.json();
+                btn.classList.toggle('is-owned', data.owned);
+                btn.textContent = data.owned ? 'Owned ✓' : 'Mark as Owned';
+            });
+        });
+    </script>
+</body>
+</html>

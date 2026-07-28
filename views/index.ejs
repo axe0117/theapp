@@ -6,7 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title><%= title%></title>
+		<title>THE UNBRICKING</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -19,22 +19,26 @@
 		/>
 		<link
 			rel="icon"
-			href="axetao.ico"
+			href="/images/brick.ico"
 		/>
 	</head>
 	<body>
-		<header class="header">
-			<nav class="navbar">
-				<a
-					href="index.html"
-					class="active"
-				>
-					Home</a
-				>
-			</nav>
-		</header>
+		<%-include("layout/header.ejs")%>
 		<main>
-			<h1>a</h1>
+			<p>Welcome, <%= name %></p>
+
+			<section class="home">
+				<div>
+					<img src="/images/miya.gif" />
+				</div>
+				<div class="dialogue-box">
+					<div class="speaker">Hoshimi Miyabi</div>
+
+					<p class="dialogue-text">Gaming...is also a part of training</p>
+
+					<div class="continue">»</div>
+				</div>
+			</section>
 		</main>
 
 		<script

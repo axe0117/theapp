@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Alexandrina Sebastiane",
+    "icon": "/images/characters/Alexandrina_Sebastiane_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Victoria Housekeeping Co."
+  },
+  {
+    "name": "Alice Thymefield",
+    "icon": "/images/characters/Alice_Thymefield_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Anby Demara",
+    "icon": "/images/characters/Anby_Demara_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Anton Ivanov",
+    "icon": "/images/characters/Anton_Ivanov_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Belobog Heavy Industries"
+  },
+  {
+    "name": "Aria",
+    "icon": "/images/characters/Aria_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Asaba Harumasa",
+    "icon": "/images/characters/Asaba_Harumasa_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Astra Yao",
+    "icon": "/images/characters/Astra_Yao_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Banyue",
+    "icon": "/images/characters/Banyue_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Belle",
+    "icon": "/images/characters/Belle_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Ben Bigger",
+    "icon": "/images/characters/Ben_Bigger_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Belobog Heavy Industries"
+  },
+  {
+    "name": "Billy Kid",
+    "icon": "/images/characters/Billy_Kid_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Burnice White",
+    "icon": "/images/characters/Burnice_White_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Caesar King",
+    "icon": "/images/characters/Caesar_King_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Cissia",
+    "icon": "/images/characters/Cissia_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Corin Wickes",
+    "icon": "/images/characters/Corin_Wickes_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Victoria Housekeeping Co."
+  },
+  {
+    "name": "Dialyn",
+    "icon": "/images/characters/Dialyn_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Ellen Joe",
+    "icon": "/images/characters/Ellen_Joe_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Victoria Housekeeping Co."
+  },
+  {
+    "name": "Evelyn Chevalier",
+    "icon": "/images/characters/Evelyn_Chevalier_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Grace Howard",
+    "icon": "/images/characters/Grace_Howard_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Belobog Heavy Industries"
+  },
+  {
+    "name": "Hoshimi Miyabi",
+    "icon": "/images/characters/Hoshimi_Miyabi_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Hugo Vlad",
+    "icon": "/images/characters/Hugo_Vlad_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Jane Doe",
+    "icon": "/images/characters/Jane_Doe_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Criminal Investigation Special Response Team"
+  },
+  {
+    "name": "Ju Fufu",
+    "icon": "/images/characters/Ju_Fufu_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Koleda Belobog",
+    "icon": "/images/characters/Koleda_Belobog_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Belobog Heavy Industries"
+  },
+  {
+    "name": "Komano Manato",
+    "icon": "/images/characters/Komano_Manato_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Lighter",
+    "icon": "/images/characters/Lighter_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Lucia Elowen",
+    "icon": "/images/characters/Lucia_Elowen_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Luciana de Montefio",
+    "icon": "/images/characters/Luciana_de_Montefio_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Nangong Yu",
+    "icon": "/images/characters/Nangong_Yu_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Nekomiya Mana",
+    "icon": "/images/characters/Nekomiya_Mana_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Nicole Demara",
+    "icon": "/images/characters/Nicole_Demara_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Norma Hollowell",
+    "icon": "/images/characters/Norma_Hollowell_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Orphie Magnusson & Magus",
+    "icon": "/images/characters/Orphie_Magnusson__Magus_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Pan Yinhu",
+    "icon": "/images/characters/Pan_Yinhu_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Piper Wheel",
+    "icon": "/images/characters/Piper_Wheel_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Promeia",
+    "icon": "/images/characters/Promeia_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Pulchra Fellini",
+    "icon": "/images/characters/Pulchra_Fellini_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Pyrois",
+    "icon": "/images/characters/Pyrois_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Qingyi",
+    "icon": "/images/characters/Qingyi_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Criminal Investigation Special Response Team"
+  },
+  {
+    "name": "Remielle Dan",
+    "icon": "/images/characters/Remielle_Dan_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Seed",
+    "icon": "/images/characters/Seed_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Seth Lowell",
+    "icon": "/images/characters/Seth_Lowell_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Criminal Investigation Special Response Team"
+  },
+  {
+    "name": "Sigrid de L'Azur",
+    "icon": "/images/characters/Sigrid_de_LAzur_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Soldier 0 - Anby",
+    "icon": "/images/characters/Soldier_0_-_Anby_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Soldier 11",
+    "icon": "/images/characters/Soldier_11_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Soukaku",
+    "icon": "/images/characters/Soukaku_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Starlight - Billy Kid",
+    "icon": "/images/characters/Starlight_-_Billy_Kid_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Sunna",
+    "icon": "/images/characters/Sunna_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Trigger",
+    "icon": "/images/characters/Trigger_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Tsukishiro Yanagi",
+    "icon": "/images/characters/Tsukishiro_Yanagi_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Ukinami Yuzuha",
+    "icon": "/images/characters/Ukinami_Yuzuha_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Velina Airgid",
+    "icon": "/images/characters/Velina_Airgid_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Vivian Banshee",
+    "icon": "/images/characters/Vivian_Banshee_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Von Lycaon",
+    "icon": "/images/characters/Von_Lycaon_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Victoria Housekeeping Co."
+  },
+  {
+    "name": "Wise",
+    "icon": "/images/characters/Wise_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Ye Shunguang",
+    "icon": "/images/characters/Ye_Shunguang_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Yidhari Murphy",
+    "icon": "/images/characters/Yidhari_Murphy_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Yixuan",
+    "icon": "/images/characters/Yixuan_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Zhao",
+    "icon": "/images/characters/Zhao_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": null
+  },
+  {
+    "name": "Zhu Yuan",
+    "icon": "/images/characters/Zhu_Yuan_icon.png",
+    "element": null,
+    "specialty": null,
+    "faction": "Criminal Investigation Special Response Team"
+  }
+]
