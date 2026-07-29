@@ -17,17 +17,17 @@ Features and How to Use:
 Disclaimers (addressing the elephant):
 - Only current best teams are shown until another way to get team data is found.
 - Consequentially, ONLY the following characters have data on teams and Gemini suggestions:
-      - Hoshimi Miyabi
-      - Zhu Yuan
-      - Ye Shunguang
-      - Yixuan
-      - Jane Doe
-      - Tsukishiro Yanagi
-      - Ellen Joe
-      - Evelyn Chevalier
-      - Hugo Vlad
-      - Soldier 0 - Anby
-      - Aria
+- Hoshimi Miyabi
+- Zhu Yuan
+- Ye Shunguang
+- Yixuan
+- Jane Doe
+- Tsukishiro Yanagi
+- Ellen Joe
+- Evelyn Chevalier
+- Hugo Vlad
+- Soldier 0 - Anby
+- Aria
 
 Future Plans:
 - Implement a cleaner UI
