@@ -14,6 +14,10 @@ const {
 	removeOwnedCharacter,
 } = require('../models/userCharacters');
 
+// router.get('/characters', async (req, res) => {
+// 	res.render('characters');
+// });
+
 router.post('/characters/:name/toggle', async (req, res) => {
 	if (!req.user) return res.status(401).json({ error: 'Not logged in' });
 
@@ -43,6 +47,7 @@ router.get('/characters/owned', async (req, res) => {
 });
 
 router.get('/index', function (req, res, next) {
-	res.render('index', { name: dbuser.name });
+	res.redirect('/index?user=john');
 });
+
 module.exports = router;

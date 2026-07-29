@@ -2,58 +2,58 @@
   {
     "name": "Alexandrina Sebastiane",
     "icon": "/images/characters/Alexandrina_Sebastiane_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Electric",
+    "specialty": "Support",
     "faction": "Victoria Housekeeping Co."
   },
   {
     "name": "Alice Thymefield",
     "icon": "/images/characters/Alice_Thymefield_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Anomaly",
+    "faction": "Spook Shack"
   },
   {
     "name": "Anby Demara",
     "icon": "/images/characters/Anby_Demara_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Stun",
+    "faction": "Cunning Hares"
   },
   {
     "name": "Anton Ivanov",
     "icon": "/images/characters/Anton_Ivanov_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Electric",
+    "specialty": "Attack",
     "faction": "Belobog Heavy Industries"
   },
   {
     "name": "Aria",
     "icon": "/images/characters/Aria_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Anomaly",
+    "faction": "Angels of Delusion"
   },
   {
     "name": "Asaba Harumasa",
     "icon": "/images/characters/Asaba_Harumasa_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Attack",
+    "faction": "Hollow Special Operations Section 6"
   },
   {
     "name": "Astra Yao",
     "icon": "/images/characters/Astra_Yao_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Support",
+    "faction": "Stars of Lyra"
   },
   {
     "name": "Banyue",
     "icon": "/images/characters/Banyue_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Rupture",
+    "faction": "Krampus Compliance Authority"
   },
   {
     "name": "Belle",
@@ -65,316 +65,316 @@
   {
     "name": "Ben Bigger",
     "icon": "/images/characters/Ben_Bigger_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Fire",
+    "specialty": "Defense",
     "faction": "Belobog Heavy Industries"
   },
   {
     "name": "Billy Kid",
     "icon": "/images/characters/Billy_Kid_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Attack",
+    "faction": "Cunning Hares"
   },
   {
     "name": "Burnice White",
     "icon": "/images/characters/Burnice_White_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Anomaly",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Caesar King",
     "icon": "/images/characters/Caesar_King_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Defense",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Cissia",
     "icon": "/images/characters/Cissia_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Attack",
+    "faction": "Metropolitan Order Division"
   },
   {
     "name": "Corin Wickes",
     "icon": "/images/characters/Corin_Wickes_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Physical",
+    "specialty": "Attack",
     "faction": "Victoria Housekeeping Co."
   },
   {
     "name": "Dialyn",
     "icon": "/images/characters/Dialyn_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Stun",
+    "faction": "Krampus Compliance Authority"
   },
   {
     "name": "Ellen Joe",
     "icon": "/images/characters/Ellen_Joe_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Ice",
+    "specialty": "Attack",
     "faction": "Victoria Housekeeping Co."
   },
   {
     "name": "Evelyn Chevalier",
     "icon": "/images/characters/Evelyn_Chevalier_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Attack",
+    "faction": "Stars of Lyra"
   },
   {
     "name": "Grace Howard",
     "icon": "/images/characters/Grace_Howard_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Electric",
+    "specialty": "Anomaly",
     "faction": "Belobog Heavy Industries"
   },
   {
     "name": "Hoshimi Miyabi",
     "icon": "/images/characters/Hoshimi_Miyabi_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Frost",
+    "specialty": "Anomaly",
+    "faction": "Hollow Special Operations Section 6"
   },
   {
     "name": "Hugo Vlad",
     "icon": "/images/characters/Hugo_Vlad_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Attack",
+    "faction": "Mockingbird"
   },
   {
     "name": "Jane Doe",
     "icon": "/images/characters/Jane_Doe_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Physical",
+    "specialty": "Anomaly",
     "faction": "Criminal Investigation Special Response Team"
   },
   {
     "name": "Ju Fufu",
     "icon": "/images/characters/Ju_Fufu_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Stun",
+    "faction": "Yunkui Summit"
   },
   {
     "name": "Koleda Belobog",
     "icon": "/images/characters/Koleda_Belobog_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Fire",
+    "specialty": "Stun",
     "faction": "Belobog Heavy Industries"
   },
   {
     "name": "Komano Manato",
     "icon": "/images/characters/Komano_Manato_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Rupture",
+    "faction": "Spook Shack"
   },
   {
     "name": "Lighter",
     "icon": "/images/characters/Lighter_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Stun",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Lucia Elowen",
     "icon": "/images/characters/Lucia_Elowen_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Support",
+    "faction": "Spook Shack"
   },
   {
     "name": "Luciana de Montefio",
     "icon": "/images/characters/Luciana_de_Montefio_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Support",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Nangong Yu",
     "icon": "/images/characters/Nangong_Yu_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Stun",
+    "faction": "Angels of Delusion"
   },
   {
     "name": "Nekomiya Mana",
     "icon": "/images/characters/Nekomiya_Mana_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Attack",
+    "faction": "Cunning Hares"
   },
   {
     "name": "Nicole Demara",
     "icon": "/images/characters/Nicole_Demara_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Support",
+    "faction": "Cunning Hares"
   },
   {
     "name": "Norma Hollowell",
     "icon": "/images/characters/Norma_Hollowell_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Stun",
+    "faction": "External Strategy Department"
   },
   {
     "name": "Orphie Magnusson & Magus",
     "icon": "/images/characters/Orphie_Magnusson__Magus_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Attack",
+    "faction": "Obol Squad"
   },
   {
     "name": "Pan Yinhu",
     "icon": "/images/characters/Pan_Yinhu_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Defense",
+    "faction": "Yunkui Summit"
   },
   {
     "name": "Piper Wheel",
     "icon": "/images/characters/Piper_Wheel_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Anomaly",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Promeia",
     "icon": "/images/characters/Promeia_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Anomaly",
+    "faction": "Krampus Compliance Authority"
   },
   {
     "name": "Pulchra Fellini",
     "icon": "/images/characters/Pulchra_Fellini_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Stun",
+    "faction": "Sons of Calydon"
   },
   {
     "name": "Pyrois",
     "icon": "/images/characters/Pyrois_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Attack",
+    "faction": "Phaethon"
   },
   {
     "name": "Qingyi",
     "icon": "/images/characters/Qingyi_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Electric",
+    "specialty": "Stun",
     "faction": "Criminal Investigation Special Response Team"
   },
   {
     "name": "Remielle Dan",
     "icon": "/images/characters/Remielle_Dan_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Lumiflux",
+    "specialty": "Anomaly",
+    "faction": "Covenant of Dayat"
   },
   {
     "name": "Seed",
     "icon": "/images/characters/Seed_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Attack",
+    "faction": "Obol Squad"
   },
   {
     "name": "Seth Lowell",
     "icon": "/images/characters/Seth_Lowell_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Electric",
+    "specialty": "Defense",
     "faction": "Criminal Investigation Special Response Team"
   },
   {
     "name": "Sigrid de L'Azur",
     "icon": "/images/characters/Sigrid_de_LAzur_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Attack",
+    "faction": "Airspace Patrol Department"
   },
   {
     "name": "Soldier 0 - Anby",
     "icon": "/images/characters/Soldier_0_-_Anby_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Attack",
+    "faction": "Defense Force - Silver Squad"
   },
   {
     "name": "Soldier 11",
     "icon": "/images/characters/Soldier_11_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Fire",
+    "specialty": "Attack",
+    "faction": "Obol Squad"
   },
   {
     "name": "Soukaku",
     "icon": "/images/characters/Soukaku_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Support",
+    "faction": "Hollow Special Operations Section 6"
   },
   {
     "name": "Starlight - Billy Kid",
     "icon": "/images/characters/Starlight_-_Billy_Kid_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Rupture",
+    "faction": "Cunning Hares"
   },
   {
     "name": "Sunna",
     "icon": "/images/characters/Sunna_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Support",
+    "faction": "Angels of Delusion"
   },
   {
     "name": "Trigger",
     "icon": "/images/characters/Trigger_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Stun",
+    "faction": "Obol Squad"
   },
   {
     "name": "Tsukishiro Yanagi",
     "icon": "/images/characters/Tsukishiro_Yanagi_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Electric",
+    "specialty": "Anomaly",
+    "faction": "Hollow Special Operations Section 6"
   },
   {
     "name": "Ukinami Yuzuha",
     "icon": "/images/characters/Ukinami_Yuzuha_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Physical",
+    "specialty": "Support",
+    "faction": "Spook Shack"
   },
   {
     "name": "Velina Airgid",
     "icon": "/images/characters/Velina_Airgid_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Wind",
+    "specialty": "Anomaly",
+    "faction": "External Strategy Department"
   },
   {
     "name": "Vivian Banshee",
     "icon": "/images/characters/Vivian_Banshee_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ether",
+    "specialty": "Anomaly",
+    "faction": "Mockingbird"
   },
   {
     "name": "Von Lycaon",
     "icon": "/images/characters/Von_Lycaon_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Ice",
+    "specialty": "Stun",
     "faction": "Victoria Housekeeping Co."
   },
   {
@@ -387,36 +387,36 @@
   {
     "name": "Ye Shunguang",
     "icon": "/images/characters/Ye_Shunguang_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Honed Edge",
+    "specialty": "Attack",
+    "faction": "Yunkui Summit"
   },
   {
     "name": "Yidhari Murphy",
     "icon": "/images/characters/Yidhari_Murphy_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Rupture",
+    "faction": "Spook Shack"
   },
   {
     "name": "Yixuan",
     "icon": "/images/characters/Yixuan_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Auric Ink",
+    "specialty": "Rupture",
+    "faction": "Yunkui Summit"
   },
   {
     "name": "Zhao",
     "icon": "/images/characters/Zhao_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
+    "element": "Ice",
+    "specialty": "Defense",
+    "faction": "Krampus Compliance Authority"
   },
   {
     "name": "Zhu Yuan",
     "icon": "/images/characters/Zhu_Yuan_icon.png",
-    "element": null,
-    "specialty": null,
+    "element": "Ether",
+    "specialty": "Attack",
     "faction": "Criminal Investigation Special Response Team"
   }
 ]

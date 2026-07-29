@@ -6,6 +6,7 @@
 		"start": "node --watch ./bin/www"
 	},
 	"dependencies": {
+		"cheerio": "^1.2.0",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
 		"dotenv": "^17.4.2",
