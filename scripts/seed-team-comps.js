@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { connectToDB } = require('../models/db');
 const { getCharacterByName } = require('../models/characters');
-const { createTeamComp } = require('../models/teamComps');
+const { upsertTeamComp, ensureIndexes } = require('../models/teamComps');
 
 async function findCharacterId(name) {
 	const character = await getCharacterByName(name);
@@ -21,6 +21,7 @@ async function buildComp({ core, members, label, tier, source, notes }) {
 
 async function seed() {
 	await connectToDB();
+	await ensureIndexes();
 
 	const compsData = [
 		// --- Miyabi teams ---
@@ -252,8 +253,8 @@ async function seed() {
 	for (const data of compsData) {
 		try {
 			const comp = await buildComp(data);
-			await createTeamComp(comp);
-			console.log('Created comp:', data.label, 'for', data.core);
+			await upsertTeamComp(comp);
+			console.log('Upserted comp:', data.label, 'for', data.core);
 		} catch (err) {
 			console.warn(
 				'Skipped comp (missing character):',

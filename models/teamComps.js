@@ -5,16 +5,16 @@ function teamComps() {
 	return getCollection('teamComps');
 }
 
-async function createTeamComp({ core, members, label, tier, source, notes }) {
-	return teamComps().insertOne({
-		core: new ObjectId(core),
-		members: members.map((id) => new ObjectId(id)),
-		label,
-		tier,
-		source,
-		notes,
-	});
-}
+// async function createTeamComp({ core, members, label, tier, source, notes }) {
+// 	return teamComps().insertOne({
+// 		core: new ObjectId(core),
+// 		members: members.map((id) => new ObjectId(id)),
+// 		label,
+// 		tier,
+// 		source,
+// 		notes,
+// 	});
+// }
 
 async function upsertTeamComp({ core, members, label, tier, source, notes }) {
 	return teamComps().updateOne(
@@ -46,7 +46,7 @@ async function ensureIndexes() {
 }
 
 module.exports = {
-	createTeamComp,
+	// createTeamComp,
 	upsertTeamComp,
 	getAllTeamComps,
 	getTeamCompsByCoreId,
