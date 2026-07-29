@@ -3,11 +3,6 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"step:one": "node scripts/fetch-icons.js",
-		"step:two": "node scripts/seed-characters.js",
-		"step:three": "node scripts/seed-team-comps.js",
-		"step:four": "node scripts/seed-builds.js",
-		"prestart": "npm run step:one && npm run step:two && npm run step:three && npm run step:four",
 		"start": "node --watch ./bin/www"
 	},
 	"dependencies": {
