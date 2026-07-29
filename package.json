@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
+		"prestart": "node scripts/fetch-icons.js && node scripts/seed-characters.js && node scripts/seed-team-comps.js",
 		"start": "node --watch ./bin/www"
 	},
 	"dependencies": {
@@ -14,6 +15,7 @@
 		"enkanetwork": "^3.1.1",
 		"enkanetwork.js": "^2.10.10",
 		"express": "~4.16.1",
+		"express-session": "^1.19.0",
 		"http-errors": "~1.6.3",
 		"mongodb": "^7.5.0",
 		"morgan": "~1.9.1"

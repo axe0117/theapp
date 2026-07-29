@@ -15,10 +15,10 @@
     <div class="grid">
         <% agents.forEach(agent => { %>
             <div class="card" data-name="<%= agent.name %>">
-                <a href="/characters/<%= encodeURIComponent(agent.name) %>">
+                <!-- <a href="/characters/<%= encodeURIComponent(agent.name) %>"> -->
                     <img src="<%= agent.icon %>" alt="<%= agent.name %>">
                     <p><%= agent.name %></p>
-                </a>
+                <!-- </a> implement this feature later-->
                 <button
                     class="owned-toggle <%= ownedNames.includes(agent.name) ? 'is-owned' : '' %>"
                     data-name="<%= agent.name %>"

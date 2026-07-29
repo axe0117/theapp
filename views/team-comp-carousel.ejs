@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Team Comps</title>
+		<link
+			rel="stylesheet"
+			href="/stylesheets/carousel.css"
+		/>
+	</head>
+	<body>
+		<a href="/characters">&larr; Back to agents</a>
+
+		<div class="tc-header">
+			<h2 id="tc-title">Team Comps</h2>
+		</div>
+
+		<div class="tc-panel">
+			<div class="tc-main-display">
+				<div class="tc-circle tc-support">
+					<img
+						id="tc-support1-img"
+						alt=""
+					/>
+					<div
+						class="tc-label"
+						id="tc-support1-name"
+					></div>
+				</div>
+
+				<div class="tc-circle tc-dps">
+					<img
+						id="tc-dps-img"
+						alt=""
+					/>
+				</div>
+
+				<div class="tc-circle tc-support">
+					<img
+						id="tc-support2-img"
+						alt=""
+					/>
+					<div
+						class="tc-label"
+						id="tc-support2-name"
+					></div>
+				</div>
+			</div>
+
+			<div
+				class="tc-dps-name"
+				id="tc-dps-name"
+			></div>
+			<p
+				class="tc-description"
+				id="tc-description"
+			></p>
+		</div>
+
+		<div class="tc-carousel">
+			<button
+				id="tc-prev"
+				class="tc-arrow"
+				aria-label="Previous team"
+			>
+				&#8592;
+			</button>
+			<div
+				class="tc-carousel-track"
+				id="tc-carousel-track"
+			></div>
+			<button
+				id="tc-next"
+				class="tc-arrow"
+				aria-label="Next team"
+			>
+				&#8594;
+			</button>
+		</div>
+
+		<script>
+			const characterName = <%- JSON.stringify(characterName) %>;
+			let comps = [];
+			let selectedIndex = 0;
+
+			function renderMainDisplay() {
+				const comp = comps[selectedIndex];
+				if (!comp) return;
+
+				const [dps, support1, support2] = comp.members;
+
+				document.getElementById('tc-title').textContent =
+					`${dps.name} Team Comps`;
+				document.getElementById('tc-dps-img').src = dps.icon;
+				document.getElementById('tc-dps-name').textContent = dps.name;
+
+				if (support1) {
+					document.getElementById('tc-support1-img').src = support1.icon;
+					document.getElementById('tc-support1-name').textContent =
+						support1.name;
+				}
+				if (support2) {
+					document.getElementById('tc-support2-img').src = support2.icon;
+					document.getElementById('tc-support2-name').textContent =
+						support2.name;
+				}
+
+				document.getElementById('tc-description').textContent =
+					`${comp.label}${comp.notes ? ' — ' + comp.notes : ''}`;
+			}
+
+			function renderCarousel() {
+				const track = document.getElementById('tc-carousel-track');
+				track.innerHTML = '';
+
+				comps.forEach((comp, i) => {
+					const item = document.createElement('div');
+					item.className =
+						'tc-mini-team' + (i === selectedIndex ? ' selected' : '');
+					item.dataset.index = i;
+
+					comp.members.forEach((m) => {
+						const img = document.createElement('img');
+						img.src = m.icon;
+						img.alt = m.name;
+						img.title = m.name;
+						item.appendChild(img);
+					});
+
+					item.addEventListener('click', () => selectIndex(i));
+					track.appendChild(item);
+				});
+
+				const selectedEl = track.querySelector('.tc-mini-team.selected');
+				if (selectedEl) {
+					selectedEl.scrollIntoView({
+						behavior: 'smooth',
+						inline: 'center',
+						block: 'nearest',
+					});
+				}
+			}
+
+			function selectIndex(i) {
+				selectedIndex = Math.max(0, Math.min(i, comps.length - 1));
+				renderMainDisplay();
+				renderCarousel();
+			}
+
+			document
+				.getElementById('tc-prev')
+				.addEventListener('click', () => selectIndex(selectedIndex - 1));
+			document
+				.getElementById('tc-next')
+				.addEventListener('click', () => selectIndex(selectedIndex + 1));
+
+			async function load() {
+				const res = await fetch(
+					`/team-comps/for/${encodeURIComponent(characterName)}`,
+				);
+				if (!res.ok) {
+					document.querySelector('.tc-panel').innerHTML =
+						'<p>No team comps found for this character yet.</p>';
+					return;
+				}
+				const data = await res.json();
+				comps = data.comps;
+
+				if (comps.length === 0) {
+					document.querySelector('.tc-panel').innerHTML =
+						'<p>No team comps found for this character yet.</p>';
+					return;
+				}
+
+				renderMainDisplay();
+				renderCarousel();
+			}
+
+			load();
+		</script>
+	</body>
+</html>

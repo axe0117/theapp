@@ -13,7 +13,7 @@ endpoint from routes/team-comps to return the "buildable" and
 		<title>Your Team Comps</title>
 		<link
 			rel="stylesheet"
-			href="/css/style.css"
+			href="/stylesheets/stylechara.css"
 		/>
 	</head>
 	<body>
@@ -40,13 +40,26 @@ endpoint from routes/team-comps to return the "buildable" and
 				}
 				const { buildable, almostThere } = await res.json();
 
+				function renderMemberIcons(members, missingId = null) {
+					return members
+						.map(
+							(m) => `
+                    <div class="team-member ${missingId && m._id === missingId ? 'missing' : ''}">
+                        <img src="${m.icon}" alt="${m.name}" title="${m.name}">
+                        <span>${m.name}</span>
+                    </div>
+                `,
+						)
+						.join('');
+				}
+
 				const buildableList = document.getElementById('buildable-list');
 				buildable.forEach((comp) => {
 					const div = document.createElement('div');
 					div.className = 'comp-card';
 					div.innerHTML = `
                     <strong>${comp.label}</strong> (${comp.tier})
-                    <p>${comp.members.map((m) => m.name).join(' + ')}</p>
+                    <div class="team-row">${renderMemberIcons(comp.members)}</div>
                     <p class="notes">${comp.notes || ''}</p>
                 `;
 					buildableList.appendChild(div);
@@ -58,7 +71,7 @@ endpoint from routes/team-comps to return the "buildable" and
 					div.className = 'comp-card dimmed';
 					div.innerHTML = `
                     <strong>${comp.label}</strong> (${comp.tier})
-                    <p>${comp.members.map((m) => m.name).join(' + ')}</p>
+                    <div class="team-row">${renderMemberIcons(comp.members, missing._id)}</div>
                     <p class="notes">Missing: <strong>${missing.name}</strong></p>
                 `;
 					almostList.appendChild(div);

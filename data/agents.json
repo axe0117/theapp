@@ -56,13 +56,6 @@
     "faction": "Krampus Compliance Authority"
   },
   {
-    "name": "Belle",
-    "icon": "/images/characters/Belle_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
-  },
-  {
     "name": "Ben Bigger",
     "icon": "/images/characters/Ben_Bigger_icon.png",
     "element": "Fire",
@@ -376,13 +369,6 @@
     "element": "Ice",
     "specialty": "Stun",
     "faction": "Victoria Housekeeping Co."
-  },
-  {
-    "name": "Wise",
-    "icon": "/images/characters/Wise_icon.png",
-    "element": null,
-    "specialty": null,
-    "faction": null
   },
   {
     "name": "Ye Shunguang",

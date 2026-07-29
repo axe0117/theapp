@@ -48,7 +48,8 @@ router.post('/signin/submit', async (req, res) => {
 		console.log(cryptoPassword.toString('hex'));
 		if (cryptoPassword.toString('hex') === dbuser.password) {
 			//Password match
-			res.render('index', { name: dbuser.name });
+			req.session.userId = dbuser._id;
+			res.redirect('/index');
 		} else {
 			//Password don't match:
 			res.redirect('/signin');

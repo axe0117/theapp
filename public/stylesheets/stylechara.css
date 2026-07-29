@@ -1,16 +1,38 @@
 @font-face {
+	/*all this work just to use the niche font I want */
+	font-family: 'FOT-Yuruka Std';
+	src: url(fonts/FOT-Yuruka\ Std.woff2);
+}
+
+@font-face {
 	/* zzz dialogue font */
 	font-family: 'zzz';
 	src: url('fonts/en-us.ttf');
 }
 
 /* -------------------------So this is the characters page------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'zzz', sans-serif;
 	background: #111;
 	color: #eee;
 	margin: 0;
 }
+h1 {
+	text-align: center;
+	font-size: 64px;
+	font-family: 'FOT-Yuruka Std';
+}
+
 header {
 	top: 0;
 	left: 0;
@@ -23,14 +45,11 @@ header {
 
 main {
 	padding: 2rem;
+	cursor: url('soul.png'), auto;
 }
 .logo img {
 	width: 100px;
 	height: 100px;
-}
-
-h1 {
-	margin-bottom: 1.5rem;
 }
 
 .grid {
@@ -109,4 +128,35 @@ a {
 	padding: 0;
 	color: white;
 	font-family: 'zzz';
+}
+
+.team-row {
+	display: flex;
+	gap: 0.75rem;
+	margin: 0.5rem 0;
+}
+
+.team-member {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.75rem;
+}
+
+.team-member img {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 6px;
+	border: 2px solid #333;
+}
+
+.team-member.missing img {
+	border-color: #a33;
+	opacity: 0.5;
+}
+
+.team-member span {
+	margin-top: 0.25rem;
+	text-align: center;
 }

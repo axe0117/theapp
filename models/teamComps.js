@@ -1,6 +1,3 @@
-//Has all the meta teams so you dont gotta keep going on youtube
-//reddit, discord, or wherever... I hope
-
 const { getCollection } = require('./db');
 const { ObjectId } = require('mongodb');
 
@@ -23,7 +20,14 @@ async function getAllTeamComps() {
 	return teamComps().find().toArray();
 }
 
+async function getTeamCompsByCoreId(coreId) {
+	return teamComps()
+		.find({ core: new ObjectId(coreId) })
+		.toArray();
+}
+
 module.exports = {
 	createTeamComp,
 	getAllTeamComps,
+	getTeamCompsByCoreId,
 };

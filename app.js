@@ -9,6 +9,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 require('dotenv').config();
 const { connectToDB } = require('./models/db');
 
@@ -51,10 +52,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// NOTE: the /characters/:name/toggle route expects req.user to be set.
-// Wire in your session/auth middleware here (e.g. express-session + passport,
-// or a JWT-verification middleware) before charactersRouter is mounted below,
-// so req.user is populated by the time those routes run.
+// Session middleware - THIS WAS MISSING, causing req.session to be undefined.
+// Must come before any route that reads/writes req.session (e.g. routes/users.js).
+app.use(
+	session({
+		secret: process.env.SESSION_SECRET || 'dev-only-fallback-secret-change-me',
+		resave: false,
+		saveUninitialized: false,
+		cookie: {
+			maxAge: 1000 * 60 * 60 * 24, // 1 day
+		},
+	}),
+);
+
+// Populate req.user from the session, so downstream routes (characters, team-comps)
+// can rely on req.user being set whenever someone is logged in.
+app.use(async (req, res, next) => {
+	if (req.session && req.session.userId) {
+		try {
+			req.user = await getUserById(req.session.userId);
+		} catch (err) {
+			console.error('Failed to load user from session:', err);
+		}
+	}
+	next();
+});
 
 // =====================================================================
 // ROUTES
@@ -83,6 +105,10 @@ app.get('/characters', async (req, res) => {
 
 app.get('/team-comps', (req, res) => {
 	res.render('team-comps');
+});
+
+app.get('/team-comps/carousel/:name', (req, res) => {
+	res.render('team-comp-carousel', { characterName: req.params.name });
 });
 
 // =====================================================================
