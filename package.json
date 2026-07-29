@@ -3,10 +3,10 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"prestart": "node scripts/fetch-icons.js && node scripts/seed-characters.js && node scripts/seed-team-comps.js",
 		"start": "node --watch ./bin/www"
 	},
 	"dependencies": {
+		"@google/genai": "^2.13.0",
 		"cheerio": "^1.2.0",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",

@@ -20,6 +20,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var charactersRouter = require('./routes/characters'); // toggle-ownership + owned-list API
 var teamCompsRouter = require('./routes/team-comps'); // which comps a user can build
+var geminiRouter = require('./routes/gemini'); // Gemini AI question endpoint
 const { getAllCharacters } = require('./models/characters');
 const { getUserById } = require('./models/userCharacters');
 
@@ -85,7 +86,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use(charactersRouter); // exposes GET/POST /characters/... ownership endpoints
 app.use(teamCompsRouter); // exposes GET /team-comps/available
-
+app.use(geminiRouter); // exposes POST /ask
 app.get('/characters', async (req, res) => {
 	const agents = await getAllCharacters();
 

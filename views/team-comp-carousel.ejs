@@ -77,106 +77,176 @@
 				&#8594;
 			</button>
 		</div>
+		<div class="bottom">
+			<div class="question-buttons">
+				<button
+					class="question-btn"
+					data-question="What is the best W-Engine and Disc Drives for <%= characterName %>?"
+				>
+					<h3>
+						What is the best W-Engine and Disc Drives for <%= characterName %>?
+					</h3>
+				</button>
+				<button
+					class="question-btn"
+					data-question="What are the optimal stats for <%= characterName%>?"
+				>
+					<h3>What are the optimal stats for <%= characterName%>?</h3>
+				</button>
+			</div>
 
+			<div class="dialogue-box">
+				<div class="speaker">Baby Fairy</div>
+
+				<p
+					id="responseBox"
+					class="dialogue-text"
+				>
+					Answer will appear here...
+				</p>
+
+				<div class="continue">»</div>
+			</div>
+		</div>
 		<script>
-			const characterName = <%- JSON.stringify(characterName) %>;
-			let comps = [];
-			let selectedIndex = 0;
+						console.log('script loaded');
+						const buttons = document.querySelectorAll('.question-btn');
+						const responseBox = document.getElementById('responseBox');
 
-			function renderMainDisplay() {
-				const comp = comps[selectedIndex];
-				if (!comp) return;
+						buttons.forEach((btn) => {
+							btn.addEventListener('click', () => {
+								const question = btn.getAttribute('data-question');
+								askQuestion(question);
+							});
+						});
 
-				const [dps, support1, support2] = comp.members;
+						async function askQuestion(question) {
+				buttons.forEach((b) => (b.disabled = true));
+				responseBox.className = 'loading';
+				responseBox.textContent = 'Thinking...';
 
-				document.getElementById('tc-title').textContent =
-					`${dps.name} Team Comps`;
-				document.getElementById('tc-dps-img').src = dps.icon;
-				document.getElementById('tc-dps-name').textContent = dps.name;
-
-				if (support1) {
-					document.getElementById('tc-support1-img').src = support1.icon;
-					document.getElementById('tc-support1-name').textContent =
-						support1.name;
-				}
-				if (support2) {
-					document.getElementById('tc-support2-img').src = support2.icon;
-					document.getElementById('tc-support2-name').textContent =
-						support2.name;
-				}
-
-				document.getElementById('tc-description').textContent =
-					`${comp.label}${comp.notes ? ' — ' + comp.notes : ''}`;
-			}
-
-			function renderCarousel() {
-				const track = document.getElementById('tc-carousel-track');
-				track.innerHTML = '';
-
-				comps.forEach((comp, i) => {
-					const item = document.createElement('div');
-					item.className =
-						'tc-mini-team' + (i === selectedIndex ? ' selected' : '');
-					item.dataset.index = i;
-
-					comp.members.forEach((m) => {
-						const img = document.createElement('img');
-						img.src = m.icon;
-						img.alt = m.name;
-						img.title = m.name;
-						item.appendChild(img);
+				try {
+					const res = await fetch('/ask', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({ question, characterName }),
 					});
 
-					item.addEventListener('click', () => selectIndex(i));
-					track.appendChild(item);
-				});
+					const data = await res.json();
 
-				const selectedEl = track.querySelector('.tc-mini-team.selected');
-				if (selectedEl) {
-					selectedEl.scrollIntoView({
-						behavior: 'smooth',
-						inline: 'center',
-						block: 'nearest',
-					});
+					if (!res.ok) {
+						throw new Error(data.error || 'Something went wrong');
+					}
+
+					responseBox.className = '';
+					responseBox.textContent = data.answer;
+				} catch (err) {
+					responseBox.className = 'error';
+					responseBox.textContent = err.message;
+				} finally {
+					buttons.forEach((b) => (b.disabled = false));
 				}
 			}
 
-			function selectIndex(i) {
-				selectedIndex = Math.max(0, Math.min(i, comps.length - 1));
-				renderMainDisplay();
-				renderCarousel();
-			}
+						// ---------- Team comp carousel ----------
+						const characterName = <%- JSON.stringify(characterName) %>;
+						let comps = [];
+						let selectedIndex = 0;
 
-			document
-				.getElementById('tc-prev')
-				.addEventListener('click', () => selectIndex(selectedIndex - 1));
-			document
-				.getElementById('tc-next')
-				.addEventListener('click', () => selectIndex(selectedIndex + 1));
+						function renderMainDisplay() {
+							const comp = comps[selectedIndex];
+							if (!comp) return;
 
-			async function load() {
-				const res = await fetch(
-					`/team-comps/for/${encodeURIComponent(characterName)}`,
-				);
-				if (!res.ok) {
-					document.querySelector('.tc-panel').innerHTML =
-						'<p>No team comps found for this character yet.</p>';
-					return;
-				}
-				const data = await res.json();
-				comps = data.comps;
+							const [dps, support1, support2] = comp.members;
 
-				if (comps.length === 0) {
-					document.querySelector('.tc-panel').innerHTML =
-						'<p>No team comps found for this character yet.</p>';
-					return;
-				}
+							document.getElementById('tc-title').textContent =
+								`${dps.name} Team Comps`;
+							document.getElementById('tc-dps-img').src = dps.icon;
+							document.getElementById('tc-dps-name').textContent = dps.name;
 
-				renderMainDisplay();
-				renderCarousel();
-			}
+							if (support1) {
+								document.getElementById('tc-support1-img').src = support1.icon;
+								document.getElementById('tc-support1-name').textContent =
+									support1.name;
+							}
+							if (support2) {
+								document.getElementById('tc-support2-img').src = support2.icon;
+								document.getElementById('tc-support2-name').textContent =
+									support2.name;
+							}
 
-			load();
+							document.getElementById('tc-description').textContent =
+								`${comp.label}${comp.notes ? ' — ' + comp.notes : ''}`;
+						}
+
+						function renderCarousel() {
+							const track = document.getElementById('tc-carousel-track');
+							track.innerHTML = '';
+
+							comps.forEach((comp, i) => {
+								const item = document.createElement('div');
+								item.className =
+									'tc-mini-team' + (i === selectedIndex ? ' selected' : '');
+								item.dataset.index = i;
+
+								comp.members.forEach((m) => {
+									const img = document.createElement('img');
+									img.src = m.icon;
+									img.alt = m.name;
+									img.title = m.name;
+									item.appendChild(img);
+								});
+
+								item.addEventListener('click', () => selectIndex(i));
+								track.appendChild(item);
+							});
+
+							const selectedEl = track.querySelector('.tc-mini-team.selected');
+							if (selectedEl) {
+								selectedEl.scrollIntoView({
+									behavior: 'smooth',
+									inline: 'center',
+									block: 'nearest',
+								});
+							}
+						}
+
+						function selectIndex(i) {
+							selectedIndex = Math.max(0, Math.min(i, comps.length - 1));
+							renderMainDisplay();
+							renderCarousel();
+						}
+
+						document
+							.getElementById('tc-prev')
+							.addEventListener('click', () => selectIndex(selectedIndex - 1));
+						document
+							.getElementById('tc-next')
+							.addEventListener('click', () => selectIndex(selectedIndex + 1));
+
+						async function load() {
+							const res = await fetch(
+								`/team-comps/for/${encodeURIComponent(characterName)}`,
+							);
+							if (!res.ok) {
+								document.querySelector('.tc-panel').innerHTML =
+									'<p>No team comps found for this character yet.</p>';
+								return;
+							}
+							const data = await res.json();
+							comps = data.comps;
+
+							if (comps.length === 0) {
+								document.querySelector('.tc-panel').innerHTML =
+									'<p>No team comps found for this character yet.</p>';
+								return;
+							}
+
+							renderMainDisplay();
+							renderCarousel();
+						}
+
+						load();
 		</script>
 	</body>
 </html>
