@@ -3,7 +3,6 @@
 const { MongoClient } = require('mongodb');
 
 const dbURL = process.env.ATLAS_URI;
-console.log('Database URL:', dbURL);
 let db;
 
 //HEY, CHANGE THE DB HERE THEN WHEN YOURE DONE, CHANGE THE COLLECTION NAME IN USERS.JS
